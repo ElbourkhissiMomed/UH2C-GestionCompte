@@ -1,0 +1,77 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col lg="7" md="9" xl="6">
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <form cForm>
+              <h1>S'enregistrer</h1>
+              <p class="text-medium-emphasis">Demander votre compte ENT</p>
+
+              <select aria-label="Default select example" cSelect>
+                <option>Type d'utilisateur</option>
+                <option value="1">Etudiant</option>
+                <option value="2">Stagiaire</option>
+                <option value="3">Personnel administratif</option>
+                <option value="3">partenaire</option>
+              </select>
+<p></p>
+<select aria-label="Default select example" cSelect>
+  <option>Etablisement</option>
+  <option value="FOC" >Faculté de Médecine Dentaire</option> 
+  <option value="FMC" >Faculté de Médecine et Pharmacie</option> 
+
+  <option value="EST" >EST</option> 
+  <option value="ENS" >ENS</option> 
+  <option value="FST" >FST</option> 
+  <option value="NCG" >ENCG</option> 
+  <option value="NSM" >ENSAM</option> 
+  <option value="NST" >ENSET</option> 
+  <option value="EEM" >ENSEM</option> 
+
+  <option value="FSC" >FSAC</option> 
+  <option value="FSB" >FS Ben Msik</option> 
+
+  <option value="FLC" >FLSH Ain Chock</option> 
+  <option value="FLB" >FLSH Ben Msik</option> 
+  <option value="FLM" >FLSH Mohammedia</option> 
+
+  <option value="FDC" >FSEJS Casablanca</option> 
+  <option value="FDM" >FSJES Mohammedia</option> 
+  <option value="FDA" >FSJES Ain Sbaa</option> 
+  <option value="SAD" >ENSAD</option> 
+
+</select>
+<p></p>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input autoComplete="name" cFormControl placeholder="CNE" />
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input autoComplete="name" cFormControl placeholder="CIN" />
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>@</span>
+                <input autoComplete="email" cFormControl placeholder="Email" />
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>@</span>
+                <input autoComplete="email" cFormControl placeholder="Confirme Email" />
+              </c-input-group>
+             
+             
+              <div class="d-grid">
+                <button cButton color="primary">Demander Compte</button>
+              </div>
+            </form>
+          </c-card-body>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

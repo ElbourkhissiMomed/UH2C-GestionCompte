@@ -1,0 +1,22 @@
+<div role="document">
+  <div class="modal-content">
+    <div class="modal-header  p-2 bg-light ">
+      <div style="color:black">
+        <i class="fa fa-check-square-o mr-2"> </i>
+        <strong class="text-black">{{title}}</strong> 
+      </div>
+      <div>
+        <button type="button" class="close btn btn-sm float-right" (click)="dismiss()" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="modal-body border-1 py-1 my-0  alert alert-warning">
+      <div style="word-wrap: break-word;min-width: 200px" class="rounded py-0 m-0 px-1">
+        <small><i class="fa fa-exclamation-triangle mx-2"></i>{{message}}</small></div>
+    </div>
+    <div class="modal-footer alert-light p-0 ">
+          <button type="button" class="btn btn-sm btn-danger  btn-block m-0" (click)="decline()"><i class="fa fa-times" aria-hidden="true"></i> {{btnCancelText}}</button>
+          <button type="button" class="btn btn-sm btn-success   btn-block m-0" (click)="accept()"><i class="fa fa-check" aria-hidden="true"></i> {{btnOkText}}</button>
+    </div>
+  </div>

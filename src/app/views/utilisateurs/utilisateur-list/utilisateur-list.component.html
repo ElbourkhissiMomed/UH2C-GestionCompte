@@ -1,0 +1,116 @@
+<div class="card">
+  <div class="card-header">
+    <i class="fa fa fa-users"></i>
+    <strong>Liste utiliateurs</strong>
+  </div>
+
+  <div class="card-body">
+    <div class="row mx-1 my-2">
+      <div class="col-sm-8 border border-light rounded p-2">
+        <div class="row justify-align-center m-0">
+          <div class="row justify-align-center m-0">
+            <div class="col-sm-1">
+              <label for="nomInput" class="col-form-label col-form-label-sm mr-2">Libelle</label>
+            </div>
+            <div class="col-sm-3">
+              <input type="text" class="form-control form-control-sm m-1 rounded" id="nom" placeholder="libelle" />
+            </div>
+            <div class="col-sm-1">
+              <label for="ref" class="col-form-label col-form-label-sm mr-2">
+                actif</label>
+            </div>
+            <div class="col-sm-3">
+              <select id="actif" class="custom-select custom-select-sm rounded m-1">
+                <option value="">tous</option>
+                <option value="true">actif</option>
+                <option value="false">inactif</option>
+              </select>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <div class="col-sm-3 align-middle">
+        <button type="button" class="btn btn-sm btn-outline-success m-1 rounded btn-block">
+          <i class="fa fa-user-plus"></i> Ajouter
+        </button>
+        <button type="submit" class="btn btn-sm btn-outline-primary m-1 rounded btn-block">
+          <i class="fa fa-search"></i> rechercher
+        </button>
+      </div>
+    </div>
+    
+
+    <div class="table-responsive table-responsive-sm m-2">
+      <table class="table table-sm table-striped table-bordered text-center align-middle" cellspacing="0"
+        cellpadding="0">
+        <thead class="uh2c text-white text-center">
+          <tr>
+            <td colspan="13" class="align-left">
+              <strong class="align-middle">Liste des utilisateurs</strong>
+            
+              <button type="button" aria-setsize="10" class="btn btn-success btn-sm float-right rounded"><i
+                  class="fa fa-file-excel-o"></i> Exporter</button>
+               
+            </td>
+
+          </tr>
+          <tr>
+            <th>Libelle</th>
+            <th>Description</th>
+            <th>Durée de vie du login </th>
+            <th>Date creation</th>
+            <th>Utilisateur creation</th>
+            <th>Date modification</th>
+            <th>Utilisateur modification</th>
+            <th>Etat</th>
+
+            <th>Actions</th>
+          </tr>
+          <!--  <tr *ngIf="users?.length <= 0">
+          <td colspan="13" class="alert alert-info">
+            <i class="fa fa-info-circle"></i> {{ "1.1.3" | translate }}
+          </td>
+        </tr> -->
+        </thead>
+        <tbody class="text-center align-middle">
+          <tr *ngFor="let user of Utilisateur">
+            <td>{{ user.libelle }}</td>
+            <td>{{ user.description }}</td>
+            <td>{{ user.duree }}</td>
+
+
+            <td>{{ user.dateCreation }}</td>
+            <td>{{ user.utilisateurCreation }}</td>
+            <td>{{ user.dateModification }}</td>
+            <td>{{ user.utilisateurModification }}</td>
+            <td>{{ user.etat }}</td>
+       
+          </tr>
+        </tbody>
+      </table>
+      <!-- <ng-pagination *ngIf="users?.length > 0" class="pagination pagination-sm ngxpagination justify-content-center"
+      position="center" pageSize="10" [itemsCount]="totalElements" (getPageData)="loadPageUsers($event)">
+    </ng-pagination> -->
+      <!--     <div class="d-flex justify-content-center" style="align-items: baseline;" *ngIf="users?.length > 0">
+      <div class="mr-4">
+        <select name="page-size" id="page-size" [(ngModel)]="pageSize" (change)="getData()">
+          <option [ngValue]="10">10</option>
+          <option [ngValue]="20">20</option>
+          <option [ngValue]="50">50</option>
+        </select>
+      </div>
+      <div class="mr-4">    
+        <ngb-pagination [collectionSize]="totalElements" 
+          class="pagination pagination-sm ngxpagination justify-content-center" position="center" [pageSize]="pageSize"
+          [(page)]="currentPageNumber" (pageChange)="loadPageUsers()"	 [maxSize]="5" [rotate]="true" [boundaryLinks]="true">
+      <ng-template ngbPaginationFirst>First</ng-template>
+      <ng-template ngbPaginationLast>Last</ng-template>
+    </ngb-pagination>
+      </div>
+      <div>
+        {{((currentPageNumber - 1)*pageSize) + 1}} - {{((currentPageNumber - 1)*pageSize) + numberOfElements}} of {{totalElements}}
+      </div>
+    </div> -->
+    </div>
+  </div>

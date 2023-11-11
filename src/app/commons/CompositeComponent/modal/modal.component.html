@@ -1,0 +1,21 @@
+<div role="document">
+  <div class="modal-content">
+    <div class="modal-header  p-2 bg-light text-black">
+      <div>
+        <i class="fa fa-file-text"> </i>
+        <strong> {{title}}</strong>
+      </div>
+      <div>
+        <button *ngIf = 'title != "Rejet Notification"' type="button" class="close  float-right" (click)="dismissModal()" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="modal-body border-1">
+      <ng-content></ng-content>
+    </div>
+    <!--<div class="modal-footer bg-light  p-2">
+      <button type="button" class="btn btn-dark btn-sm rounded" (click)="closeModal()">{{'Fermer'| translate}}</button>
+    </div>-->
+  </div>
+</div>
